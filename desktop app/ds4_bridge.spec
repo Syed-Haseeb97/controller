@@ -2,7 +2,7 @@
 """
 PyInstaller Single-Executable Specification for DS4 Bridge 120Hz Tray App
 Build command on Windows:
-    pyinstaller --clean --noconfirm pc_server/ds4_bridge.spec
+    pyinstaller --clean --noconfirm "desktop app/ds4_bridge.spec"
 Produces:
     dist/DS4Bridge120Hz.exe (No console window, embeds ViGEmClient DLLs from vgamepad)
 """

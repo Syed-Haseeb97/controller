@@ -1,21 +1,21 @@
-import receiverPyRaw from '../../pc_server/ds4_udp_receiver.py?raw';
-import fakeSenderPyRaw from '../../pc_server/fake_phone_sender.py?raw';
-import trayAppPyRaw from '../../pc_server/ds4_tray_app.py?raw';
-import automatedTestsPyRaw from '../../pc_server/automated_test_suite.py?raw';
-import pyinstallerSpecRaw from '../../pc_server/ds4_bridge.spec?raw';
-import buildInstallerBatRaw from '../../pc_server/build_installer.bat?raw';
-import requirementsTxtRaw from '../../pc_server/requirements.txt?raw';
-import controllerStateKtRaw from '../../android_app/app/src/main/java/com/ds4bridge/controller/ControllerState.kt?raw';
-import gyroProcessorKtRaw from '../../android_app/app/src/main/java/com/ds4bridge/controller/GyroProcessor.kt?raw';
-import udpSenderThreadKtRaw from '../../android_app/app/src/main/java/com/ds4bridge/controller/UdpSenderThread.kt?raw';
-import layoutProfileKtRaw from '../../android_app/app/src/main/java/com/ds4bridge/controller/LayoutProfile.kt?raw';
-import hapticsRumbleKtRaw from '../../android_app/app/src/main/java/com/ds4bridge/controller/HapticsAndRumbleManager.kt?raw';
-import startScreenKtRaw from '../../android_app/app/src/main/java/com/ds4bridge/controller/StartScreen.kt?raw';
-import gameplayScreenKtRaw from '../../android_app/app/src/main/java/com/ds4bridge/controller/GameplayScreen.kt?raw';
-import mainActivityKtRaw from '../../android_app/app/src/main/java/com/ds4bridge/controller/MainActivity.kt?raw';
-import drawableAssetsMdRaw from '../../android_app/DRAWABLE_ASSETS.md?raw';
-import manifestXmlRaw from '../../android_app/app/src/main/AndroidManifest.xml?raw';
-import buildGradleKtsRaw from '../../android_app/app/build.gradle.kts?raw';
+import receiverPyRaw from '../../desktop app/ds4_udp_receiver.py?raw';
+import fakeSenderPyRaw from '../../desktop app/fake_phone_sender.py?raw';
+import trayAppPyRaw from '../../desktop app/ds4_tray_app.py?raw';
+import automatedTestsPyRaw from '../../desktop app/automated_test_suite.py?raw';
+import pyinstallerSpecRaw from '../../desktop app/ds4_bridge.spec?raw';
+import buildInstallerBatRaw from '../../desktop app/build_installer.bat?raw';
+import requirementsTxtRaw from '../../desktop app/requirements.txt?raw';
+import controllerStateKtRaw from '../../mobile app/app/src/main/java/com/ds4bridge/controller/ControllerState.kt?raw';
+import gyroProcessorKtRaw from '../../mobile app/app/src/main/java/com/ds4bridge/controller/GyroProcessor.kt?raw';
+import udpSenderThreadKtRaw from '../../mobile app/app/src/main/java/com/ds4bridge/controller/UdpSenderThread.kt?raw';
+import layoutProfileKtRaw from '../../mobile app/app/src/main/java/com/ds4bridge/controller/LayoutProfile.kt?raw';
+import hapticsRumbleKtRaw from '../../mobile app/app/src/main/java/com/ds4bridge/controller/HapticsAndRumbleManager.kt?raw';
+import startScreenKtRaw from '../../mobile app/app/src/main/java/com/ds4bridge/controller/StartScreen.kt?raw';
+import gameplayScreenKtRaw from '../../mobile app/app/src/main/java/com/ds4bridge/controller/GameplayScreen.kt?raw';
+import mainActivityKtRaw from '../../mobile app/app/src/main/java/com/ds4bridge/controller/MainActivity.kt?raw';
+import drawableAssetsMdRaw from '../../mobile app/DRAWABLE_ASSETS.md?raw';
+import manifestXmlRaw from '../../mobile app/app/src/main/AndroidManifest.xml?raw';
+import buildGradleKtsRaw from '../../mobile app/app/build.gradle.kts?raw';
 
 export interface SourceFileEntry {
   id: string;
@@ -30,7 +30,7 @@ export interface SourceFileEntry {
 export const SOURCE_FILES: SourceFileEntry[] = [
   {
     id: 'gameplay_screen_kt',
-    path: 'android_app/app/src/main/java/com/ds4bridge/controller/GameplayScreen.kt',
+    path: 'mobile app/app/src/main/java/com/ds4bridge/controller/GameplayScreen.kt',
     filename: 'GameplayScreen.kt',
     category: 'Android Kotlin + Compose',
     language: 'kotlin',
@@ -40,7 +40,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'start_screen_kt',
-    path: 'android_app/app/src/main/java/com/ds4bridge/controller/StartScreen.kt',
+    path: 'mobile app/app/src/main/java/com/ds4bridge/controller/StartScreen.kt',
     filename: 'StartScreen.kt',
     category: 'Android Kotlin + Compose',
     language: 'kotlin',
@@ -50,17 +50,17 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'drawable_assets_md',
-    path: 'android_app/DRAWABLE_ASSETS.md',
+    path: 'mobile app/DRAWABLE_ASSETS.md',
     filename: 'DRAWABLE_ASSETS.md',
     category: 'Android Kotlin + Compose',
     language: 'text',
     summary:
-      'Complete manifest of all 24 PNG image files in `android_app/app/src/main/res/drawable-xxhdpi/` (`btn_cross.png`, `stick_base.png`, `stick_cap.png`, `ic_settings.png`, `logo_app.png`, `ic_badge_usb.png`, `ic_badge_wifi.png`, etc.).',
+      'Complete manifest of all 24 PNG image files in `mobile app/app/src/main/res/drawable-xxhdpi/` (`btn_cross.png`, `stick_base.png`, `stick_cap.png`, `ic_settings.png`, `logo_app.png`, `ic_badge_usb.png`, `ic_badge_wifi.png`, etc.).',
     content: drawableAssetsMdRaw,
   },
   {
     id: 'ds4_tray_app',
-    path: 'pc_server/ds4_tray_app.py',
+    path: 'desktop app/ds4_tray_app.py',
     filename: 'ds4_tray_app.py',
     category: 'Windows Python (ViGEmBus)',
     language: 'python',
@@ -70,7 +70,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'ds4_udp_receiver',
-    path: 'pc_server/ds4_udp_receiver.py',
+    path: 'desktop app/ds4_udp_receiver.py',
     filename: 'ds4_udp_receiver.py',
     category: 'Windows Python (ViGEmBus)',
     language: 'python',
@@ -80,7 +80,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'automated_test_suite',
-    path: 'pc_server/automated_test_suite.py',
+    path: 'desktop app/automated_test_suite.py',
     filename: 'automated_test_suite.py',
     category: 'Windows Python (ViGEmBus)',
     language: 'python',
@@ -90,7 +90,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'fake_phone_sender',
-    path: 'pc_server/fake_phone_sender.py',
+    path: 'desktop app/fake_phone_sender.py',
     filename: 'fake_phone_sender.py',
     category: 'Windows Python (ViGEmBus)',
     language: 'python',
@@ -100,7 +100,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'pyinstaller_spec',
-    path: 'pc_server/ds4_bridge.spec',
+    path: 'desktop app/ds4_bridge.spec',
     filename: 'ds4_bridge.spec',
     category: 'Windows Python (ViGEmBus)',
     language: 'python',
@@ -110,7 +110,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'build_installer_bat',
-    path: 'pc_server/build_installer.bat',
+    path: 'desktop app/build_installer.bat',
     filename: 'build_installer.bat',
     category: 'Windows Python (ViGEmBus)',
     language: 'text',
@@ -120,7 +120,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'requirements_txt',
-    path: 'pc_server/requirements.txt',
+    path: 'desktop app/requirements.txt',
     filename: 'requirements.txt',
     category: 'Windows Python (ViGEmBus)',
     language: 'text',
@@ -129,7 +129,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'layout_profile_kt',
-    path: 'android_app/app/src/main/java/com/ds4bridge/controller/LayoutProfile.kt',
+    path: 'mobile app/app/src/main/java/com/ds4bridge/controller/LayoutProfile.kt',
     filename: 'LayoutProfile.kt',
     category: 'Android Kotlin + Compose',
     language: 'kotlin',
@@ -139,7 +139,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'haptics_rumble_kt',
-    path: 'android_app/app/src/main/java/com/ds4bridge/controller/HapticsAndRumbleManager.kt',
+    path: 'mobile app/app/src/main/java/com/ds4bridge/controller/HapticsAndRumbleManager.kt',
     filename: 'HapticsAndRumbleManager.kt',
     category: 'Android Kotlin + Compose',
     language: 'kotlin',
@@ -149,7 +149,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'controller_state_kt',
-    path: 'android_app/app/src/main/java/com/ds4bridge/controller/ControllerState.kt',
+    path: 'mobile app/app/src/main/java/com/ds4bridge/controller/ControllerState.kt',
     filename: 'ControllerState.kt',
     category: 'Android Kotlin + Compose',
     language: 'kotlin',
@@ -159,7 +159,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'gyro_processor_kt',
-    path: 'android_app/app/src/main/java/com/ds4bridge/controller/GyroProcessor.kt',
+    path: 'mobile app/app/src/main/java/com/ds4bridge/controller/GyroProcessor.kt',
     filename: 'GyroProcessor.kt',
     category: 'Android Kotlin + Compose',
     language: 'kotlin',
@@ -169,7 +169,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'udp_sender_thread_kt',
-    path: 'android_app/app/src/main/java/com/ds4bridge/controller/UdpSenderThread.kt',
+    path: 'mobile app/app/src/main/java/com/ds4bridge/controller/UdpSenderThread.kt',
     filename: 'UdpSenderThread.kt',
     category: 'Android Kotlin + Compose',
     language: 'kotlin',
@@ -179,7 +179,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'main_activity_kt',
-    path: 'android_app/app/src/main/java/com/ds4bridge/controller/MainActivity.kt',
+    path: 'mobile app/app/src/main/java/com/ds4bridge/controller/MainActivity.kt',
     filename: 'MainActivity.kt',
     category: 'Android Kotlin + Compose',
     language: 'kotlin',
@@ -189,7 +189,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'android_manifest_xml',
-    path: 'android_app/app/src/main/AndroidManifest.xml',
+    path: 'mobile app/app/src/main/AndroidManifest.xml',
     filename: 'AndroidManifest.xml',
     category: 'Android Kotlin + Compose',
     language: 'xml',
@@ -199,7 +199,7 @@ export const SOURCE_FILES: SourceFileEntry[] = [
   },
   {
     id: 'build_gradle_kts',
-    path: 'android_app/app/build.gradle.kts',
+    path: 'mobile app/app/build.gradle.kts',
     filename: 'build.gradle.kts',
     category: 'Android Kotlin + Compose',
     language: 'kotlin',

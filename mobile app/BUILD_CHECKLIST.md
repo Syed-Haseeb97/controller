@@ -1,7 +1,7 @@
 # Android build checklist
 
 1. Install Android Studio (Koala or newer) with SDK Platform 35 and JDK 17 (bundled JBR is fine).
-2. File > Open > select the `android_app` folder. If `gradle/wrapper/gradle-wrapper.jar` is missing,
+2. File > Open > select the `mobile app` folder. If `gradle/wrapper/gradle-wrapper.jar` is missing,
    Android Studio regenerates it on sync (or run `gradle wrapper` once).
 3. Sync Gradle, then Build > Make Project. Fix nothing: the project must build with zero errors.
 4. Debug on a phone: enable Developer options + USB debugging, plug in, press Run.

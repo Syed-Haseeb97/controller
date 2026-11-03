@@ -255,7 +255,7 @@ export const TrayAndTestSuitePanel: React.FC<TrayAndTestSuitePanelProps> = ({
             <div className="flex items-center gap-2">
               <Monitor className="w-4 h-4 text-sky-400" />
               <span className="text-xs font-bold text-white">
-                DS4Bridge120Hz.exe — Windows System Tray GUI (`pc_server/ds4_tray_app.py`)
+                DS4Bridge120Hz.exe — Windows System Tray GUI (`desktop app/ds4_tray_app.py`)
               </span>
             </div>
             <div className="flex items-center gap-2">
@@ -827,7 +827,7 @@ export const TrayAndTestSuitePanel: React.FC<TrayAndTestSuitePanelProps> = ({
               </h3>
             </div>
             <p className="text-xs text-slate-400 mt-0.5">
-              Backed by <code>python pc_server/automated_test_suite.py</code> — profiles hot-path CPU,
+              Backed by <code>python "desktop app/automated_test_suite.py"</code> — profiles hot-path CPU,
               USB vs Wi-Fi RTT, packet loss, reconnect recovery, battery, Steam Input, Native PC
               games, and Emulators.
             </p>

@@ -3,15 +3,15 @@
 Do the steps in order; stop at the first failure. Need: Windows 10/11 PC, Android 8+ phone, USB cable, same Wi-Fi.
 
 **0. PC prerequisites** - install ViGEmBus, `pip install vgamepad pillow qrcode`, and Android platform-tools (`adb`).
-Run `python pc_server/automated_test_suite.py` -> all 13 tests PASS.
+Run `python "desktop app/automated_test_suite.py"` -> all 13 tests PASS.
 
-**1. Build** - create the wrapper JAR (see `android_app/README.md`), then `cd android_app && ./gradlew assembleDebug`.
+**1. Build** - create the wrapper JAR (see `mobile app/README.md`), then `cd "mobile app" && .\gradlew assembleDebug`.
 Pass: `BUILD SUCCESSFUL`, `app/build/outputs/apk/debug/app-debug.apk` exists.
 
-**2. Install** - `adb install -r app/build/outputs/apk/debug/app-debug.apk`; launch the app.
+**2. Install** - `adb install -r "mobile app/app/build/outputs/apk/debug/app-debug.apk"`; launch the app.
 Pass: app opens with real artwork (no text-label boxes), launcher icon shown.
 
-**3. PC app + driver** - `python pc_server/ds4_tray_app.py`. Wizard driver step must turn green
+**3. PC app + driver** - `python "desktop app/ds4_tray_app.py"`. Wizard driver step must turn green
 ("Virtual DualShock 4 created"). Open `joy.cpl`: exactly ONE "Wireless Controller". Click "Try again" 3 times: still one.
 
 **4. Wi-Fi pairing** - phone and PC on the same network. In the phone wizard tap *Scan QR* and scan the PC QR

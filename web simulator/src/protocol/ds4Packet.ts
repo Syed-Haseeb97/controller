@@ -1,8 +1,8 @@
 /**
  * Exact 48-Byte Little-Endian Binary Packet Format (`<IQHhhhhBBffffff`)
  * Shared across:
- *  - Windows Python Receiver (`pc_server/ds4_udp_receiver.py`)
- *  - Python 120Hz Fake-Phone Benchmark (`pc_server/fake_phone_sender.py`)
+ *  - Windows Python Receiver (`desktop app/ds4_udp_receiver.py`)
+ *  - Python 120Hz Fake-Phone Benchmark (`desktop app/fake_phone_sender.py`)
  *  - Android Kotlin UDP Sender (`ControllerState.kt` / `UdpSenderThread.kt`)
  *  - Interactive Protocol Workbench (Web Simulator)
  */

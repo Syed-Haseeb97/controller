@@ -3,7 +3,7 @@
 All controller buttons, analog sticks, system buttons, and mini status badges are loaded via `painterResource(R.drawable.<name>)` from:
 
 ```text
-android_app/app/src/main/res/drawable-xxhdpi/
+mobile app/app/src/main/res/drawable-xxhdpi/
 ```
 
 Valid transparent PNG placeholder files are pre-created in `res/drawable-xxhdpi/` so the Gradle build compiles with zero missing-resource errors out of the box. Replace any file below with your own PNG or WebP artwork (using the exact same resource base name) without modifying any Kotlin code.

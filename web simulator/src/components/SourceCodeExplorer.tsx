@@ -82,7 +82,7 @@ export const SourceCodeExplorer: React.FC = () => {
               <code className="text-emerald-300">gamepad-tester.com</code>:
             </p>
             <pre className="rounded bg-slate-900 px-2.5 py-1.5 font-mono text-[11px] text-emerald-300 overflow-x-auto">
-              python pc_server/ds4_udp_receiver.py --test
+              python "desktop app/ds4_udp_receiver.py" --test
             </pre>
           </div>
 
@@ -95,8 +95,8 @@ export const SourceCodeExplorer: React.FC = () => {
               the 120Hz synthetic phone benchmark in a second terminal:
             </p>
             <pre className="rounded bg-slate-900 px-2.5 py-1.5 font-mono text-[11px] text-violet-300 overflow-x-auto">
-              python pc_server/ds4_udp_receiver.py --port 26760{'\n'}
-              python pc_server/fake_phone_sender.py --rate 120
+              python "desktop app/ds4_udp_receiver.py" --port 26760{'\n'}
+              python "desktop app/fake_phone_sender.py" --rate 120
             </pre>
           </div>
         </div>

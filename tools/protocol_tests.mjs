@@ -1,8 +1,8 @@
 // Run: node tools/protocol_tests.mjs   (Node >= 22.18 strips TypeScript types natively)
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { shapeStick, DEFAULT_STICK_CONFIG } from '../src/protocol/stickMath.ts';
-import { validateProfileJson } from '../src/protocol/profileSchema.ts';
+import { shapeStick, DEFAULT_STICK_CONFIG } from '../web simulator/src/protocol/stickMath.ts';
+import { validateProfileJson } from '../web simulator/src/protocol/profileSchema.ts';
 
 test('stick deadzone swallows small input', () => {
   assert.deepEqual(shapeStick(0.05, 0.02, DEFAULT_STICK_CONFIG), [0, 0]);

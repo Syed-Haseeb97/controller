@@ -2,8 +2,8 @@
 """
 Download real, permissively licensed artwork and install it as the 24 DS4 Bridge
 controller images (256x256 RGBA PNG) into BOTH:
-    android_app/app/src/main/res/drawable-xxhdpi/
-    public/assets/
+    mobile app/app/src/main/res/drawable-xxhdpi/
+    web simulator/public/assets/
 
 Run:   python tools/fetch_assets.py            (download + build + verify)
        python tools/fetch_assets.py --urls     (just print the download URLs)
@@ -40,8 +40,8 @@ except ImportError:  # pragma: no cover
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = Path(__file__).resolve().parent / ".asset_cache"
 DEST_DIRS = [
-    ROOT / "android_app/app/src/main/res/drawable-xxhdpi",
-    ROOT / "public/assets",
+    ROOT / "mobile app/app/src/main/res/drawable-xxhdpi",
+    ROOT / "web simulator/public/assets",
 ]
 SIZE = 256
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
@@ -217,7 +217,7 @@ def verify() -> bool:
     print(f"\n{'file':20s} {'dir':9s} {'bytes':>7s} {'size':>9s} {'alpha':>5s} {'opaque%':>8s}  result")
     ok_all = True
     for d in DEST_DIRS:
-        tag = "android" if "android_app" in str(d) else "web"
+        tag = "android" if "mobile app" in str(d) else "web"
         for name in ASSETS:
             f = d / f"{name}.png"
             problems = []

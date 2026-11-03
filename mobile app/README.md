@@ -7,14 +7,14 @@ The Gradle wrapper JAR is a binary and could not be included in this repository.
 but `./gradlew` will not run until the JAR exists. Create it with **either** option:
 
 ### Option A - Android Studio (easiest)
-1. `File > Open...` and select this `android_app/` folder.
+1. `File > Open...` and select this `mobile app/` folder.
 2. Let the initial Gradle sync finish. Android Studio downloads Gradle 8.10.2 from
    `gradle-wrapper.properties` and regenerates `gradle/wrapper/gradle-wrapper.jar` for you.
    If sync is blocked, `File > Settings > Build > Gradle` and set "Use Gradle from: Wrapper".
 
 ### Option B - command line (needs any local Gradle >= 8.x, e.g. `brew install gradle`, `choco install gradle`, sdkman)
 ```bash
-cd android_app
+cd "mobile app"
 gradle wrapper --gradle-version 8.10.2 --distribution-type bin
 ```
 This writes `gradle/wrapper/gradle-wrapper.jar` and refreshes `gradlew` / `gradlew.bat`

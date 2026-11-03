@@ -320,12 +320,12 @@ def test_ps_and_touchpad_own_bits() -> dict:
     assert [c for c in pad.calls if c[0] != "reset"] == [("button", "DS4_BUTTON_TRIGGER_LEFT"), ("button", "DS4_BUTTON_TRIGGER_RIGHT")]
     # Android / web source constants must agree with the PC parser, and no composites may remain
     root = Path(__file__).resolve().parent.parent
-    kt = (root / "android_app/app/src/main/java/com/ds4bridge/controller/ControllerState.kt").read_text()
-    ts = (root / "src/protocol/ds4Packet.ts").read_text()
+    kt = (root / "mobile app/app/src/main/java/com/ds4bridge/controller/ControllerState.kt").read_text()
+    ts = (root / "web simulator/src/protocol/ds4Packet.ts").read_text()
     assert re.search(r"BTN_PS\s*=\s*1 shl 6", kt) and re.search(r"BTN_TOUCHPAD\s*=\s*1 shl 7", kt)
     assert re.search(r"PS:\s*1 << 6", ts) and re.search(r"TOUCHPAD:\s*1 << 7", ts)
-    lp = (root / "android_app/app/src/main/java/com/ds4bridge/controller/LayoutProfile.kt").read_text()
-    lts = (root / "src/protocol/layoutProfiles.ts").read_text()
+    lp = (root / "mobile app/app/src/main/java/com/ds4bridge/controller/LayoutProfile.kt").read_text()
+    lts = (root / "web simulator/src/protocol/layoutProfiles.ts").read_text()
     assert "BTN_SHARE or" not in lp and "BTN_L3 or" not in lp and "SHARE | DS4_BUTTONS.OPTIONS" not in lts and "L3 | DS4_BUTTONS.R3" not in lts
     return {"ps_mask": "0x0040", "touchpad_mask": "0x0080", "verdict": "PASS (PS/Touchpad isolated; composites removed)"}
 

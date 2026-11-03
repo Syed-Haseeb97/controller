@@ -1,5 +1,7 @@
 {
-  "description": "A simple greeting experience that welcomes visitors and makes it easy to start a conversation.",
+  "title": "DS4 Bridge 120Hz",
+  "language": "en",
+  "description": "DS4 Bridge 120Hz turns an Android phone into a low-latency 120Hz virtual DualShock 4 controller for PC gaming.",
   "robots": {
     "index": false
   },
