@@ -462,10 +462,11 @@ export const GyroConfigurationPanel: React.FC<GyroPanelProps> = ({
 interface PairingModalProps {
   isOpen: boolean;
   onClose: () => void;
-  endpoint: { ip: string; port: number; rateHz: number; connected: boolean };
+  endpoint: { ip: string; port: number; token?: string; rateHz: number; connected: boolean };
   onSaveEndpoint: (next: {
     ip: string;
     port: number;
+    token?: string;
     rateHz: number;
     connected: boolean;
   }) => void;

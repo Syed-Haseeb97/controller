@@ -303,17 +303,15 @@ export const AndroidControllerSurface: React.FC<AndroidControllerSurfaceProps> =
     if (!binding) return;
     stickPointersRef.current.delete(e.pointerId);
 
-    if (!latchMode) {
-      onChangeTouchInput((prev) => ({
-        ...prev,
-        [binding.kind]:
-          binding.kind === 'leftStick' ? keyboardLeftStick : { x: 0, y: 0 },
-        activeTouchCount:
-          stickPointersRef.current.size +
-          buttonPointersRef.current.size +
-          (latchedButtonsMask !== 0 ? 1 : 0),
-      }));
-    }
+    onChangeTouchInput((prev) => ({
+      ...prev,
+      [binding.kind]:
+        binding.kind === 'leftStick' ? keyboardLeftStick : { x: 0, y: 0 },
+      activeTouchCount:
+        stickPointersRef.current.size +
+        buttonPointersRef.current.size +
+        (latchedButtonsMask !== 0 ? 1 : 0),
+    }));
   };
 
   const handleButtonPointerDown = (

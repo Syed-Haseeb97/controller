@@ -147,7 +147,13 @@ export default function App() {
   };
 
   // Paired PC Receiver Endpoint & Rate (default 120Hz)
-  const [pairedEndpoint, setPairedEndpoint] = useState({
+  const [pairedEndpoint, setPairedEndpoint] = useState<{
+    ip: string;
+    port: number;
+    token?: string;
+    rateHz: number;
+    connected: boolean;
+  }>({
     ip: '192.168.1.42',
     port: 26760,
     token: 'a1b2c3d4e5f60718',
@@ -1523,7 +1529,7 @@ export default function App() {
         isOpen={isPairingModalOpen}
         onClose={() => setIsPairingModalOpen(false)}
         endpoint={pairedEndpoint}
-        onSaveEndpoint={setPairedEndpoint}
+        onSaveEndpoint={(next) => setPairedEndpoint((prev) => ({ ...prev, ...next }))}
       />
     </div>
   );

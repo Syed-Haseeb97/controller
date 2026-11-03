@@ -271,6 +271,8 @@ def probe_virtual_ds4_driver(existing_gamepad=None, release: bool = False):
     try:
         import vgamepad as vg
     except Exception as exc:
+        if "BUS_NOT_FOUND" in str(exc) or "VIGEM" in str(exc):
+            return False, f"ViGEmBus driver not found ({exc}). Install ViGEmBus driver.", None, None
         return False, f"vgamepad import failed ({type(exc).__name__}: {exc}). Run: pip install vgamepad", None, None
 
     with _PROBE_LOCK:
@@ -307,6 +309,20 @@ def import_vgamepad_or_explain():
         print("Fix this by running:", file=sys.stderr)
         print("    pip install vgamepad qrcode[pil]\n", file=sys.stderr)
         raise SystemExit(1) from exc
+    except Exception as exc:
+        print("\n" + "=" * 74, file=sys.stderr)
+        print(" [CRITICAL ERROR] Could not connect to ViGEmBus driver (ViGEmBus missing)", file=sys.stderr)
+        print("=" * 74, file=sys.stderr)
+        print(f"Underlying error: {exc}\n", file=sys.stderr)
+        print("How to fix this on Windows 10/11:", file=sys.stderr)
+        print("  1. Download ViGEmBus_Setup_x64.exe from:", file=sys.stderr)
+        print("     https://github.com/nefarius/ViGEmBus/releases/latest", file=sys.stderr)
+        print("  2. Run the installer as Administrator.", file=sys.stderr)
+        print("  3. Reboot Windows if the bus driver does not immediately start.", file=sys.stderr)
+        print("  4. Check Device Manager -> 'System devices' ->", file=sys.stderr)
+        print("     'Nefarius Virtual Gamepad Emulation Bus'.", file=sys.stderr)
+        print("=" * 74 + "\n", file=sys.stderr)
+        raise SystemExit(2) from exc
 
     try:
         gamepad = vg.VDS4Gamepad()

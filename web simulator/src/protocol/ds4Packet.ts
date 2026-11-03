@@ -265,8 +265,8 @@ export function generateTestModeState(elapsedSec: number): {
       state: {
         ...INITIAL_CONTROLLER_STATE,
         buttonsMask: meta.mask,
-        l2: meta.mask === DS4_BUTTONS.L2_DIG ? 255 : 0,
-        r2: meta.mask === DS4_BUTTONS.R2_DIG ? 255 : 0,
+        l2: meta.mask === UI_TRIGGER_FLAGS.L2_DIG ? 255 : 0,
+        r2: meta.mask === UI_TRIGGER_FLAGS.R2_DIG ? 255 : 0,
       },
     };
   }
@@ -319,7 +319,7 @@ export function generateTestModeState(elapsedSec: number): {
     state: {
       ...INITIAL_CONTROLLER_STATE,
       buttonsMask:
-        (l2 > 10 ? DS4_BUTTONS.L2_DIG : 0) | (r2 > 10 ? DS4_BUTTONS.R2_DIG : 0),
+        (l2 > 10 ? UI_TRIGGER_FLAGS.L2_DIG : 0) | (r2 > 10 ? UI_TRIGGER_FLAGS.R2_DIG : 0),
       l2,
       r2,
     },
