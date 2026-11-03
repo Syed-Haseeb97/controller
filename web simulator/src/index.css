@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+/*
+ * DS4 Bridge palette: ink-indigo surfaces + cyan primary, tuned to sit well with the violet / coral /
+ * pink / green face-button artwork. Overrides Tailwind's slate + sky ramps so every existing utility
+ * class picks it up.
+ */
+@theme {
+  --color-slate-950: #070a14;
+  --color-slate-900: #0d1226;
+  --color-slate-800: #1b2142;
+  --color-slate-700: #2e3560;
+  --color-slate-600: #444c7d;
+  --color-slate-500: #6b73a3;
+  --color-slate-400: #9aa3c7;
+  --color-slate-300: #c3c9e2;
+  --color-sky-200: #a5f3fc;
+  --color-sky-300: #67e8f9;
+  --color-sky-400: #22d3ee;
+  --color-sky-500: #06b6d4;
+  --color-sky-600: #0891b2;
+  --color-sky-700: #0e7490;
+}
+
+@layer base {
+  body {
+    background: #070a14;
+    color: #e2e8f0;
+  }
+  button {
+    cursor: pointer;
+  }
+}

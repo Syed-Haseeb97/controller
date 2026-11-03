@@ -1,0 +1,10 @@
+{
+  "description": "A simple greeting experience that welcomes visitors and makes it easy to start a conversation.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

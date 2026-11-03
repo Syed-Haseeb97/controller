@@ -1,0 +1,5 @@
+vgamepad>=0.1.0
+qrcode[pil]>=7.4.2
+pystray>=0.19.5
+Pillow>=10.2.0
+pyinstaller>=6.4.0
